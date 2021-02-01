@@ -1,6 +1,6 @@
 import s from './layout.module.css';
 
-const Layout = ({id, title, descr, urlBg, colorBg}) => {
+const Layout = ({id, title, urlBg, colorBg, children}) => {
     return(
         <div>
             <section className = {s.root} id = {id}
@@ -17,7 +17,7 @@ const Layout = ({id, title, descr, urlBg, colorBg}) => {
                             <span className = {s.separator}></span>
                         </div>
                         <div className = {s.descr + " " + s.full}>
-                            <p className = {descr}></p>
+                            {children}
                         </div>
                     </article>
                 </div>
